@@ -3,6 +3,7 @@
 ```
 systemd-resolve --interface enp0s3 --set-dns 8.8.8.8
 ```
+NOTE: Only in Ubuntu 20.04
 
 # Upgrade system
 
@@ -141,6 +142,12 @@ kubectl get nodes -o wide
 
 ```
 sudo kubeadm reset && \
-sudo rm -fr
-rm
+sudo rm -fr /etc/cni && \
+rm $HOME/.kube/config
+```
+
+# Remove all resources in docker
+
+```
+docker system prune -a
 ```
