@@ -9,7 +9,8 @@ NOTE: Only in Ubuntu 20.04
 
 ```
 apt-get update && \
-apt-get upgrade -y
+apt-get upgrade -y && \
+apt-get install -y tmux jq
 ```
 
 # Configure system network
